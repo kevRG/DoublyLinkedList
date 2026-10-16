@@ -1,19 +1,19 @@
 public class Main {
     public static void main(String[] args) {
         // Lista de libros
-        DoublyLinkedList<Book> books = new DoublyLinkedList<>();
-        books.insertLast(new Book("Clean Code", "Robert C. Martin"));
-        books.insertLast(new Book("Effective Java", "Joshua Bloch"));
-        books.insertFirst(new Book("Refactoring", "Martin Fowler"));
+        DoublyLinkedList<SoccerPlayer> soccerPlayers = new DoublyLinkedList<>();
+        soccerPlayers.insertLast(new SoccerPlayer("Cristiano Ronaldo", "Al-Nassr"));
+        soccerPlayers.insertLast(new SoccerPlayer("Kylian Mbappé", "Real Madrid"));
+        soccerPlayers.insertFirst(new SoccerPlayer("Jude Bellingham", "Real Madrid"));
 
-        books.traverse();
+        soccerPlayers.traverse();
         // Lo nuevo: podemos recorrerla al revés
-        books.traverseBackward();
+        soccerPlayers.traverseBackward();
 
-        System.out.println("Existe Clean Code: " + books.contains(new Book("Clean Code", "Robert C. Martin")));
-        books.remove(new Book("Clean Code", "Robert C. Martin"));
+        System.out.println("Existe Cristiano Ronaldo: " + soccerPlayers.contains(new SoccerPlayer("Cristiano Ronaldo", "Al-Nassr")));
+        soccerPlayers.remove(new SoccerPlayer("Kylian Mbappé", "Real Madrid"));
 
-        books.traverse();
-        books.traverseBackward();
+        soccerPlayers.traverse();
+        soccerPlayers.traverseBackward();
     }
 }
